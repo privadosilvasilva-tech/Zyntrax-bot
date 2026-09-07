@@ -1,0 +1,26 @@
+{
+    "1539105495321681922": {
+        "entrada": {
+            "enabled": true,
+            "channel_id": 1539750750337630368,
+            "title": "╭━━━〔 👋 NOVO MEMBRO 〕━━━╮ Bem-vindo(a), {membro}! ╰━━━〔 {servidor} 〕━━━╯",
+            "description": "╭━━━〔 ✦ SEJA MUITO BEM-VINDO(A)! ✦ 〕━━━╮\n\nOlá, {membro_mencao}! 👋\nÉ um prazer receber você no {servidor}.\n\n╰━━━〔 🌐 SUA CHEGADA 〕━━━╯\n\nVocê acaba de se juntar à nossa comunidade.\nAqui você poderá conhecer pessoas, participar das conversas, aproveitar os recursos do servidor e fazer parte de tudo o que construímos juntos.\n\n╭━━━〔 📊 INFORMAÇÕES 〕━━━╮\n\n👤 Membro: {membro_tag}\n🏆 Posição: {contagem_membros_ordinal}\n👥 Membros atuais: {contagem_membros}\n📅 Entrada: {data_entrada}\n🪪 Conta criada em: {conta_criada_em}\n\n╰━━━〔 💫 AGORA VOCÊ FAZ PARTE 〕━━━╯\n\nLeia nossas regras, explore os canais e fique à vontade para participar.\nSua presença torna a nossa comunidade ainda mais especial. ❤️\n\nEsperamos que sua experiência aqui seja incrível!\n\n╭━━━〔 🚀 DIVIRTA-SE! 〕━━━╮\nBem-vindo(a) à família, {membro}! 🤝\n╰━━━〔 ✦ {servidor} ✦ 〕━━━╯",
+            "footer": "✦ {servidor} • {contagem_membros} membros • {data_entrada} ✦",
+            "color": 10181046,
+            "thumbnail": "https://cdn.discordapp.com/attachments/1539490482650882148/1540517992767684689/file_000000008a30822fa2e12a4d2553101f.png?ex=6a8a3eae&is=6a88ed2e&hm=3e05b7900a60912108ed521002310a3e2451fc45ae165196ccf4b9e20709aab0&",
+            "image": "https://cdn.discordapp.com/attachments/1539490482650882148/1540520364793274460/file_00000000fb68822fae490c46cc402bd9.png?ex=6a8a40e4&is=6a88ef64&hm=f8c5e7e3e56537884fe6c6979973cb33ae8d459f9a5adaea774a018e9f841377&",
+            "ping_member": false
+        },
+        "saida": {
+            "enabled": true,
+            "channel_id": 1539751268141105152,
+            "title": "╭━━━〔 👋 ATÉ LOGO! 〕━━━╮ {membro} deixou o {servidor}. ╰━━━〔 💙 BOA SORTE! 〕━━━╯",
+            "description": "╭━━━〔 💙 UMA DESPEDIDA 〕━━━╮\n\n{membro_mencao} deixou o {servidor}.\n\nSentiremos sua falta por aqui. Esperamos que sua passagem pela nossa comunidade tenha sido especial e que você leve boas lembranças consigo. ✨\n\n╭━━━〔 📊 INFORMAÇÕES DA SAÍDA 〕━━━╮\n\n👤 Membro: {membro_tag}\n👥 Membros restantes: {contagem_membros}\n📅 Data da saída: {data_entrada}\n🪪 Conta criada em: {conta_criada_em}\n\n╰━━━〔 🌙 ATÉ UMA PRÓXIMA! 〕━━━╯\n\nNem toda despedida precisa ser um adeus.\nAs portas estarão sempre abertas caso um dia decida voltar. 🤍\n\nObrigado por ter feito parte de {servidor}.",
+            "footer": "✦ {servidor} • {contagem_membros} membros restantes • Até breve, {membro}! ✦",
+            "color": 10181046,
+            "thumbnail": "https://cdn.discordapp.com/attachments/1539490482650882148/1540517992767684689/file_000000008a30822fa2e12a4d2553101f.png?ex=6a8a3eae&is=6a88ed2e&hm=3e05b7900a60912108ed521002310a3e2451fc45ae165196ccf4b9e20709aab0&",
+            "image": "https://cdn.discordapp.com/attachments/1539490482650882148/1540520364793274460/file_00000000fb68822fae490c46cc402bd9.png?ex=6a8a40e4&is=6a88ef64&hm=f8c5e7e3e56537884fe6c6979973cb33ae8d459f9a5adaea774a018e9f841377&",
+            "ping_member": false
+        }
+    }
+}

@@ -1,0 +1,80 @@
+{
+  "1539105495321681922": {
+    "real": {
+      "canal_painel": null,
+      "mensagem_painel": null,
+      "titulo": "🛒 Loja",
+      "descricao": "Bem-vindo à nossa loja!",
+      "cupom": {
+        "codigo": null,
+        "percentual": 0.0,
+        "validade": null,
+        "ativo": false
+      },
+      "produtos": [],
+      "canal_logs": null,
+      "cargos_staff": []
+    },
+    "ficticio": {
+      "canal_painel": 1541225868024881212,
+      "mensagem_painel": 1546287109181153341,
+      "titulo": "🛍️ Loja Oficial Zyntrax",
+      "descricao": "✨ Bem-vindo à Loja Oficial Zyntrax!\n\n💰 Utilize seu saldo fictício para adquirir planos, cargos e benefícios exclusivos.\n\n🎁 Escolha seu produto, confirme a compra e aproveite suas vantagens!\n\n⚠️ Todos os valores utilizados nesta loja são fictícios e não possuem valor monetário real.",
+      "cupom": {
+        "codigo": "VD451",
+        "percentual": 50.0,
+        "validade": "2026-09-10",
+        "ativo": true
+      },
+      "produtos": [
+        {
+          "id": "5727f386",
+          "tipo": "plano",
+          "nome": "『⭐』Cliente Plano Normal",
+          "descricao": "Acesso ao Plano Normal por 30 dias, com os benefícios essenciais para clientes da loja. Ideal para quem deseja começar com uma opção acessível e prática.\n\n• Acesso a categoria privada de clientes + Bônus diário.\n • + Cargo exclusivo.",
+          "valor": 2500.0,
+          "desconto_max": 25.0,
+          "cargo_id": null,
+          "cargos_id": [
+            1546280892358729910,
+            1546280832065609778,
+            1546280744534679602
+          ]
+        },
+        {
+          "id": "30de62e4",
+          "tipo": "plano",
+          "nome": "『👑』Cliente VIP — 7 Dias",
+          "descricao": "Receba o cargo exclusivo Cliente VIP durante 7 dias e aproveite benefícios especiais dentro do servidor.\n\n• Acesso a categoria privada de Clientes + Cargos exclusivo + Bônus diário + Suporte com prioridade 50%.",
+          "valor": 3500.0,
+          "desconto_max": 10.0,
+          "cargo_id": null,
+          "cargos_id": [
+            1546280892358729910,
+            1546280832065609778,
+            1546280744534679602
+          ]
+        },
+        {
+          "id": "73b426b6",
+          "tipo": "plano",
+          "nome": "『💎』Cliente Plano Premium",
+          "descricao": "Plano Premium com duração de 30 dias, criado para clientes que desejam uma experiência superior, com benefícios exclusivos e vantagens adicionais.\n\n• Acesso a categoria exclusiva.\n• Cargo exclusivo.\n• Prioridade em Eventos,sorteios, Suporte.\n• Bônus diário de 341$ ( Dinheiro fictício.",
+          "valor": 10000.0,
+          "desconto_max": 15.0,
+          "cargo_id": null,
+          "cargos_id": [
+            1546280952328749097,
+            1546280892358729910,
+            1546280832065609778,
+            1546280744534679602
+          ]
+        }
+      ],
+      "canal_logs": 1541226062418284594,
+      "cargos_staff": [
+        1540138210125156472
+      ]
+    }
+  }
+}

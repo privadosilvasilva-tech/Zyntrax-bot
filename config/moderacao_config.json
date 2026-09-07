@@ -1,0 +1,29 @@
+{
+    "1539105495321681922": {
+        "antispam": {
+            "enabled": true,
+            "repetition_limit": 5,
+            "caps_limit": 75
+        },
+        "antiraid": {
+            "enabled": true,
+            "join_limit": 6,
+            "time_window": 20
+        },
+        "infracoes": {
+            "enabled": true,
+            "escalacao": []
+        },
+        "antilink": {
+            "enabled": true,
+            "allowed_roles": [
+                1539411814528319638,
+                1539412458790461491,
+                1539411373115580636,
+                1539412710524067910
+            ],
+            "allowed_bot_roles": [],
+            "message": "Convites de outros servidores não são permitidos aqui sem permissão."
+        }
+    }
+}

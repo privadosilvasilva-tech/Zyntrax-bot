@@ -1,0 +1,151 @@
+0 verbose cli /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/bin/npm
+1 info using npm@11.17.0
+2 info using node@v26.3.1
+3 silly config load:file:/data/data/com.termux/files/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/data/com.termux/files/home/suporte-bot/.npmrc
+5 silly config load:file:/data/data/com.termux/files/home/.npmrc
+6 silly config load:file:/data/data/com.termux/files/usr/etc/npmrc
+7 verbose title npm install lucide-react
+8 verbose argv "install" "lucide-react"
+9 verbose logfile logs-max:10 dir:/data/data/com.termux/files/home/.npm/_logs/2026-09-06T00_50_37_931Z-
+10 verbose logfile /data/data/com.termux/files/home/.npm/_logs/2026-09-06T00_50_37_931Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 silly packumentCache heap:1106509824 maxSize:276627456 maxEntrySize:138313728
+14 silly idealTree buildDeps
+15 silly fetch manifest lucide-react@*
+16 silly packumentCache full:https://registry.npmjs.org/lucide-react cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/lucide-react 1135ms (cache updated)
+18 silly packumentCache full:https://registry.npmjs.org/lucide-react set size:undefined disposed:false
+19 silly fetch manifest react@^19.0.0
+20 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/react 230ms (cache revalidated)
+22 silly packumentCache full:https://registry.npmjs.org/react set size:6951203 disposed:false
+23 silly placeDep ROOT lucide-react@1.41.0 OK for: suporte-bot@1.0.0 want: *
+24 silly reify moves {}
+25 silly audit bulk request {
+25 silly audit   '@babel/runtime': [ '7.29.7' ],
+25 silly audit   '@emnapi/runtime': [ '1.11.3' ],
+25 silly audit   '@img/colour': [ '1.1.0' ],
+25 silly audit   '@img/sharp-darwin-arm64': [ '0.35.4' ],
+25 silly audit   '@img/sharp-darwin-x64': [ '0.35.4' ],
+25 silly audit   '@img/sharp-freebsd-wasm32': [ '0.35.4' ],
+25 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.3.3' ],
+25 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.3.3' ],
+25 silly audit   '@img/sharp-libvips-linux-arm': [ '1.3.3' ],
+25 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.3.3' ],
+25 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.3.3' ],
+25 silly audit   '@img/sharp-libvips-linux-riscv64': [ '1.3.3' ],
+25 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.3.3' ],
+25 silly audit   '@img/sharp-libvips-linux-x64': [ '1.3.3' ],
+25 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.3.3' ],
+25 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.3.3' ],
+25 silly audit   '@img/sharp-linux-arm': [ '0.35.4' ],
+25 silly audit   '@img/sharp-linux-arm64': [ '0.35.4' ],
+25 silly audit   '@img/sharp-linux-ppc64': [ '0.35.4' ],
+25 silly audit   '@img/sharp-linux-riscv64': [ '0.35.4' ],
+25 silly audit   '@img/sharp-linux-s390x': [ '0.35.4' ],
+25 silly audit   '@img/sharp-linux-x64': [ '0.35.4' ],
+25 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.35.4' ],
+25 silly audit   '@img/sharp-linuxmusl-x64': [ '0.35.4' ],
+25 silly audit   '@img/sharp-wasm32': [ '0.35.4' ],
+25 silly audit   '@img/sharp-webcontainers-wasm32': [ '0.35.4' ],
+25 silly audit   '@img/sharp-win32-arm64': [ '0.35.4' ],
+25 silly audit   '@img/sharp-win32-ia32': [ '0.35.4' ],
+25 silly audit   '@img/sharp-win32-x64': [ '0.35.4' ],
+25 silly audit   '@next/env': [ '16.3.4' ],
+25 silly audit   '@next/swc-darwin-arm64': [ '16.3.4' ],
+25 silly audit   '@next/swc-darwin-x64': [ '16.3.4' ],
+25 silly audit   '@next/swc-linux-arm64-gnu': [ '16.3.4' ],
+25 silly audit   '@next/swc-linux-arm64-musl': [ '16.3.4' ],
+25 silly audit   '@next/swc-linux-x64-gnu': [ '16.3.4' ],
+25 silly audit   '@next/swc-linux-x64-musl': [ '16.3.4' ],
+25 silly audit   '@next/swc-win32-arm64-msvc': [ '16.3.4' ],
+25 silly audit   '@next/swc-win32-x64-msvc': [ '16.3.4' ],
+25 silly audit   '@panva/hkdf': [ '1.2.1' ],
+25 silly audit   '@supabase/auth-js': [ '2.115.0' ],
+25 silly audit   '@supabase/functions-js': [ '2.115.0' ],
+25 silly audit   '@supabase/phoenix': [ '0.4.5' ],
+25 silly audit   '@supabase/postgrest-js': [ '2.115.0' ],
+25 silly audit   '@supabase/realtime-js': [ '2.115.0' ],
+25 silly audit   '@supabase/storage-js': [ '2.115.0' ],
+25 silly audit   '@supabase/supabase-js': [ '2.115.0' ],
+25 silly audit   '@swc/helpers': [ '0.5.23' ],
+25 silly audit   '@types/jsonwebtoken': [ '9.0.10' ],
+25 silly audit   '@types/ms': [ '2.1.0' ],
+25 silly audit   '@types/node': [ '26.4.1' ],
+25 silly audit   'baseline-browser-mapping': [ '2.11.21' ],
+25 silly audit   'buffer-equal-constant-time': [ '1.0.1' ],
+25 silly audit   'caniuse-lite': [ '1.0.30001810' ],
+25 silly audit   'client-only': [ '0.0.1' ],
+25 silly audit   cookie: [ '0.6.0', '0.7.2' ],
+25 silly audit   'detect-libc': [ '2.1.2' ],
+25 silly audit   'ecdsa-sig-formatter': [ '1.0.11' ],
+25 silly audit   'iceberg-js': [ '0.8.1' ],
+25 silly audit   jose: [ '4.15.9' ],
+25 silly audit   jsonwebtoken: [ '9.0.3' ],
+25 silly audit   jwa: [ '2.0.1' ],
+25 silly audit   jws: [ '4.0.1' ],
+25 silly audit   'lodash.includes': [ '4.3.0' ],
+25 silly audit   'lodash.isboolean': [ '3.0.3' ],
+25 silly audit   'lodash.isinteger': [ '4.0.4' ],
+25 silly audit   'lodash.isnumber': [ '3.0.3' ],
+25 silly audit   'lodash.isplainobject': [ '4.0.6' ],
+25 silly audit   'lodash.isstring': [ '4.0.1' ],
+25 silly audit   'lodash.once': [ '4.1.1' ],
+25 silly audit   'lru-cache': [ '6.0.0' ],
+25 silly audit   ms: [ '2.1.3' ],
+25 silly audit   nanoid: [ '3.3.18' ],
+25 silly audit   next: [ '16.3.4' ],
+25 silly audit   'next-auth': [ '4.24.15' ],
+25 silly audit   oauth: [ '0.9.15' ],
+25 silly audit   'object-hash': [ '2.2.0' ],
+25 silly audit   'oidc-token-hash': [ '5.2.0' ],
+25 silly audit   'openid-client': [ '5.7.1' ],
+25 silly audit   picocolors: [ '1.1.1' ],
+25 silly audit   postcss: [ '8.5.23' ],
+25 silly audit   preact: [ '10.29.8' ],
+25 silly audit   'preact-render-to-string': [ '5.2.6' ],
+25 silly audit   'pretty-format': [ '3.8.0' ],
+25 silly audit   react: [ '19.2.8' ],
+25 silly audit   'react-dom': [ '19.2.8' ],
+25 silly audit   'react-icons': [ '5.7.0' ],
+25 silly audit   'safe-buffer': [ '5.2.1' ],
+25 silly audit   scheduler: [ '0.27.0' ],
+25 silly audit   semver: [ '7.8.5' ],
+25 silly audit   sharp: [ '0.35.4' ],
+25 silly audit   'source-map-js': [ '1.2.1' ],
+25 silly audit   'styled-jsx': [ '5.1.6' ],
+25 silly audit   tslib: [ '2.8.1' ],
+25 silly audit   'undici-types': [ '8.3.0' ],
+25 silly audit   uuid: [ '11.1.1' ],
+25 silly audit   yallist: [ '4.0.0' ],
+25 silly audit   'lucide-react': [ '1.41.0' ]
+25 silly audit }
+26 http cache lucide-react@https://registry.npmjs.org/lucide-react/-/lucide-react-1.41.0.tgz 0ms (cache hit)
+27 silly tarball no local data for lucide-react@https://registry.npmjs.org/lucide-react/-/lucide-react-1.41.0.tgz. Extracting by manifest.
+28 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 295ms
+29 silly audit report {
+29 silly audit report   cookie: [
+29 silly audit report     {
+29 silly audit report       id: 1103907,
+29 silly audit report       url: 'https://github.com/advisories/GHSA-pxg6-pf52-xh8x',
+29 silly audit report       title: 'cookie accepts cookie name, path, and domain with out of bounds characters',
+29 silly audit report       severity: 'low',
+29 silly audit report       vulnerable_versions: '<0.7.0',
+29 silly audit report       cwe: [Array],
+29 silly audit report       cvss: [Object]
+29 silly audit report     }
+29 silly audit report   ]
+29 silly audit report }
+30 silly packumentCache corgi:https://registry.npmjs.org/cookie cache-miss
+31 http fetch GET 200 https://registry.npmjs.org/cookie 217ms (cache revalidated)
+32 silly packumentCache corgi:https://registry.npmjs.org/cookie set size:25657 disposed:false
+33 http fetch GET 200 https://registry.npmjs.org/lucide-react/-/lucide-react-1.41.0.tgz 11392ms (cache miss)
+34 silly ADD node_modules/lucide-react
+35 verbose cwd /data/data/com.termux/files/home/suporte-bot
+36 verbose os Linux 5.4.210-android12-9-g5debd08bbf29-ab912
+37 verbose node v26.3.1
+38 verbose npm  v11.17.0
+39 verbose exit 0
+40 info ok

@@ -1,0 +1,18 @@
+09:35:05 | WARNING  | discord.client | PyNaCl is not installed, voice will NOT be supported
+09:35:05 | WARNING  | discord.client | davey is not installed, voice will NOT be supported
+09:35:05 | INFO     | discord.client | logging in using static token
+09:35:06 | INFO     | bot | Cog carregado: configuracoes
+09:35:06 | INFO     | bot | Cog carregado: embeds
+09:35:06 | INFO     | bot | Cog carregado: formularios
+09:35:06 | INFO     | bot | Cog carregado: logs
+09:35:06 | INFO     | bot | Cog carregado: recepcao
+09:35:06 | INFO     | bot | Cog carregado: test
+09:35:06 | INFO     | bot | 4 comando(s) sincronizado(s)
+09:35:06 | INFO     | bot |    - /configuracoes
+09:35:06 | INFO     | bot |    - /embed
+09:35:06 | INFO     | bot |    - /logs
+09:35:06 | INFO     | bot |    - /ping
+09:35:07 | INFO     | discord.gateway | Shard ID None has connected to Gateway (Session ID: d473ff30c035cda5232fdeafd6b5b379).
+09:35:09 | INFO     | bot | Conectado como 『🚀』Zyntrax bot#8509 (ID: 1540163536406192148)
+09:35:09 | INFO     | bot | Em 1 servidor(es)
+09:55:25 | INFO     | discord.gateway | Shard ID None has successfully RESUMED session d473ff30c035cda5232fdeafd6b5b379.

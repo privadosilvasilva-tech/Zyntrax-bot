@@ -1,0 +1,47 @@
+{
+    "1539105495321681922": {
+        "canal_id": 1539808385031999489,
+        "titulo": "🎭 Escolha seus Cargos",
+        "descricao": "✨ **PERSONALIZE SUAS NOTIFICAÇÕES**\n\nEscolha abaixo quais notificações você deseja receber no servidor. Basta reagir ao cargo correspondente para ativá-lo — e reagir novamente para removê-lo.\n\n╭━━━「 🔔 NOTIFICAÇÕES 」━━━╮\n\n📢 **@Anuncio**\nReceba anúncios e comunicados importantes.\n\n🌐 **@everyone**\nReceba notificações gerais e avisos destinados a toda a comunidade.\n\n📰 **@novidades**\nFique por dentro das novidades e mudanças do servidor.\n\n🎉 **@sorteio**\nReceba notificações quando novos sorteios forem realizados.\n\n🎪 **@Evento**\nNão perca eventos, atividades e ocasiões especiais.\n\n🤖 **@StatusBot**\nAcompanhe avisos relacionados ao funcionamento e status do bot.\n\n🔄 **@AtualizaçõesBot**\nReceba novidades, melhorias e atualizações do Zyntrax Bot.\n\n╰━━━━━━━━━━━━━━━━━━━━╯\n\n💡 **Como funciona?**\nReaja ao emoji correspondente para receber o cargo. Para deixar de receber determinada notificação, basta remover sua reação.\n\n🔔 **Você escolhe o que quer receber.**\nNão é necessário ativar todos os",
+        "cor": 5793266,
+        "cargos": [
+            {
+                "emoji": "📢",
+                "cargo_id": 1539486947813232710,
+                "nome_cargo": "@Anuncio"
+            },
+            {
+                "emoji": "🌐",
+                "cargo_id": 1539487056084869191,
+                "nome_cargo": "@everyone"
+            },
+            {
+                "emoji": "📰",
+                "cargo_id": 1539487178445291570,
+                "nome_cargo": "@novidades"
+            },
+            {
+                "emoji": "🎉",
+                "cargo_id": 1539487240881971211,
+                "nome_cargo": "@sorteio"
+            },
+            {
+                "emoji": "🎪",
+                "cargo_id": 1539487299857948722,
+                "nome_cargo": "@Evento"
+            },
+            {
+                "emoji": "🤖",
+                "cargo_id": 1539487391029399645,
+                "nome_cargo": "@StatusBot"
+            },
+            {
+                "emoji": "🔄",
+                "cargo_id": 1539487541013520384,
+                "nome_cargo": "@AtualizaçõesBot"
+            }
+        ],
+        "canal_publicado_id": 1539808385031999489,
+        "mensagem_id": 1541111742963253259
+    }
+}

@@ -1,0 +1,287 @@
+0 verbose cli /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/bin/npm
+1 info using npm@11.17.0
+2 info using node@v26.3.1
+3 silly config load:file:/data/data/com.termux/files/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/data/com.termux/files/home/suporte-bot/.npmrc
+5 silly config load:file:/data/data/com.termux/files/home/.npmrc
+6 silly config load:file:/data/data/com.termux/files/usr/etc/npmrc
+7 verbose title npm install typescript @types/react @types/node
+8 verbose argv "install" "typescript" "@types/react" "@types/node" "--save-dev"
+9 verbose logfile logs-max:10 dir:/data/data/com.termux/files/home/.npm/_logs/2026-09-06T00_55_27_374Z-
+10 verbose logfile /data/data/com.termux/files/home/.npm/_logs/2026-09-06T00_55_27_374Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 silly packumentCache heap:1106509824 maxSize:276627456 maxEntrySize:138313728
+14 silly idealTree buildDeps
+15 silly fetch manifest typescript@*
+16 silly packumentCache full:https://registry.npmjs.org/typescript cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/typescript 976ms (cache revalidated)
+18 silly packumentCache full:https://registry.npmjs.org/typescript set size:15639539 disposed:false
+19 silly fetch manifest @types/react@*
+20 silly packumentCache full:https://registry.npmjs.org/@types%2freact cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/@types%2freact 268ms (cache revalidated)
+22 silly packumentCache full:https://registry.npmjs.org/@types%2freact set size:2637439 disposed:false
+23 silly fetch manifest @types/node@*
+24 silly packumentCache full:https://registry.npmjs.org/@types%2fnode cache-miss
+25 http fetch GET 200 https://registry.npmjs.org/@types%2fnode 293ms (cache revalidated)
+26 silly packumentCache full:https://registry.npmjs.org/@types%2fnode set size:11100097 disposed:false
+27 silly placeDep ROOT @types/node@26.4.1 REPLACE for: suporte-bot@1.0.0 want: *
+28 silly placeDep ROOT @types/react@19.2.18 OK for: suporte-bot@1.0.0 want: *
+29 silly placeDep ROOT typescript@7.0.2 OK for: suporte-bot@1.0.0 want: *
+30 silly fetch manifest csstype@^3.2.2
+31 silly packumentCache full:https://registry.npmjs.org/csstype cache-miss
+32 silly fetch manifest @typescript/typescript-aix-ppc64@7.0.2
+33 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-aix-ppc64 cache-miss
+34 silly fetch manifest @typescript/typescript-linux-arm@7.0.2
+35 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-linux-arm cache-miss
+36 silly fetch manifest @typescript/typescript-linux-x64@7.0.2
+37 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-linux-x64 cache-miss
+38 silly fetch manifest @typescript/typescript-sunos-x64@7.0.2
+39 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-sunos-x64 cache-miss
+40 silly fetch manifest @typescript/typescript-win32-x64@7.0.2
+41 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-win32-x64 cache-miss
+42 silly fetch manifest @typescript/typescript-darwin-x64@7.0.2
+43 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-darwin-x64 cache-miss
+44 http fetch GET 200 https://registry.npmjs.org/csstype 179ms (cache revalidated)
+45 silly packumentCache full:https://registry.npmjs.org/csstype set size:274189 disposed:false
+46 silly fetch manifest @typescript/typescript-netbsd-x64@7.0.2
+47 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-netbsd-x64 cache-miss
+48 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-sunos-x64 383ms (cache revalidated)
+49 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-sunos-x64 set size:6046 disposed:false
+50 silly fetch manifest @typescript/typescript-freebsd-x64@7.0.2
+51 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-freebsd-x64 cache-miss
+52 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-netbsd-x64 300ms (cache revalidated)
+53 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-netbsd-x64 set size:6065 disposed:false
+54 silly fetch manifest @typescript/typescript-linux-arm64@7.0.2
+55 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-linux-arm64 cache-miss
+56 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-aix-ppc64 521ms (cache revalidated)
+57 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-aix-ppc64 set size:6049 disposed:false
+58 silly fetch manifest @typescript/typescript-linux-ppc64@7.0.2
+59 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-linux-ppc64 cache-miss
+60 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-linux-arm 551ms (cache revalidated)
+61 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-linux-arm set size:143918 disposed:false
+62 silly fetch manifest @typescript/typescript-linux-s390x@7.0.2
+63 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-linux-s390x cache-miss
+64 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-darwin-x64 573ms (cache revalidated)
+65 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-darwin-x64 set size:144358 disposed:false
+66 silly fetch manifest @typescript/typescript-openbsd-x64@7.0.2
+67 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-openbsd-x64 cache-miss
+68 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-win32-x64 621ms (cache revalidated)
+69 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-win32-x64 set size:148288 disposed:false
+70 silly fetch manifest @typescript/typescript-win32-arm64@7.0.2
+71 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-win32-arm64 cache-miss
+72 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-linux-s390x 149ms (cache revalidated)
+73 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-linux-s390x set size:6086 disposed:false
+74 silly fetch manifest @typescript/typescript-darwin-arm64@7.0.2
+75 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-darwin-arm64 cache-miss
+76 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-linux-x64 735ms (cache revalidated)
+77 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-linux-x64 set size:150803 disposed:false
+78 silly fetch manifest @typescript/typescript-netbsd-arm64@7.0.2
+79 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-netbsd-arm64 cache-miss
+80 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-linux-ppc64 279ms (cache revalidated)
+81 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-linux-ppc64 set size:6087 disposed:false
+82 silly fetch manifest @typescript/typescript-freebsd-arm64@7.0.2
+83 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-freebsd-arm64 cache-miss
+84 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-linux-arm64 325ms (cache revalidated)
+85 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-linux-arm64 set size:151536 disposed:false
+86 silly fetch manifest @typescript/typescript-linux-loong64@7.0.2
+87 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-linux-loong64 cache-miss
+88 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-freebsd-x64 461ms (cache revalidated)
+89 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-freebsd-x64 set size:6088 disposed:false
+90 silly fetch manifest @typescript/typescript-linux-riscv64@7.0.2
+91 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-linux-riscv64 cache-miss
+92 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-openbsd-x64 268ms (cache revalidated)
+93 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-openbsd-x64 set size:6086 disposed:false
+94 silly fetch manifest @typescript/typescript-openbsd-arm64@7.0.2
+95 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-openbsd-arm64 cache-miss
+96 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-netbsd-arm64 267ms (cache revalidated)
+97 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-netbsd-arm64 set size:6109 disposed:false
+98 silly fetch manifest @typescript/typescript-linux-mips64el@7.0.2
+99 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-linux-mips64el cache-miss
+100 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-darwin-arm64 298ms (cache revalidated)
+101 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-darwin-arm64 set size:150808 disposed:false
+102 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-win32-arm64 443ms (cache revalidated)
+103 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-win32-arm64 set size:144820 disposed:false
+104 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-openbsd-arm64 266ms (cache revalidated)
+105 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-openbsd-arm64 set size:6126 disposed:false
+106 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-freebsd-arm64 452ms (cache revalidated)
+107 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-freebsd-arm64 set size:6126 disposed:false
+108 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-linux-mips64el 271ms (cache revalidated)
+109 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-linux-mips64el set size:6146 disposed:false
+110 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-linux-loong64 465ms (cache revalidated)
+111 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-linux-loong64 set size:6127 disposed:false
+112 http fetch GET 200 https://registry.npmjs.org/@typescript%2ftypescript-linux-riscv64 467ms (cache revalidated)
+113 silly packumentCache full:https://registry.npmjs.org/@typescript%2ftypescript-linux-riscv64 set size:6127 disposed:false
+114 silly placeDep ROOT csstype@3.2.3 OK for: @types/react@19.2.18 want: ^3.2.2
+115 silly placeDep ROOT @typescript/typescript-aix-ppc64@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+116 silly placeDep ROOT @typescript/typescript-darwin-arm64@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+117 silly placeDep ROOT @typescript/typescript-darwin-x64@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+118 silly placeDep ROOT @typescript/typescript-freebsd-arm64@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+119 silly placeDep ROOT @typescript/typescript-freebsd-x64@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+120 silly placeDep ROOT @typescript/typescript-linux-arm@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+121 silly placeDep ROOT @typescript/typescript-linux-arm64@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+122 silly placeDep ROOT @typescript/typescript-linux-loong64@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+123 silly placeDep ROOT @typescript/typescript-linux-mips64el@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+124 silly placeDep ROOT @typescript/typescript-linux-ppc64@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+125 silly placeDep ROOT @typescript/typescript-linux-riscv64@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+126 silly placeDep ROOT @typescript/typescript-linux-s390x@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+127 silly placeDep ROOT @typescript/typescript-linux-x64@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+128 silly placeDep ROOT @typescript/typescript-netbsd-arm64@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+129 silly placeDep ROOT @typescript/typescript-netbsd-x64@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+130 silly placeDep ROOT @typescript/typescript-openbsd-arm64@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+131 silly placeDep ROOT @typescript/typescript-openbsd-x64@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+132 silly placeDep ROOT @typescript/typescript-sunos-x64@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+133 silly placeDep ROOT @typescript/typescript-win32-arm64@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+134 silly placeDep ROOT @typescript/typescript-win32-x64@7.0.2 OK for: typescript@7.0.2 want: 7.0.2
+135 silly reify moves {}
+136 silly audit bulk request {
+136 silly audit   '@babel/runtime': [ '7.29.7' ],
+136 silly audit   '@emnapi/runtime': [ '1.11.3' ],
+136 silly audit   '@img/colour': [ '1.1.0' ],
+136 silly audit   '@img/sharp-darwin-arm64': [ '0.35.4' ],
+136 silly audit   '@img/sharp-darwin-x64': [ '0.35.4' ],
+136 silly audit   '@img/sharp-freebsd-wasm32': [ '0.35.4' ],
+136 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.3.3' ],
+136 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.3.3' ],
+136 silly audit   '@img/sharp-libvips-linux-arm': [ '1.3.3' ],
+136 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.3.3' ],
+136 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.3.3' ],
+136 silly audit   '@img/sharp-libvips-linux-riscv64': [ '1.3.3' ],
+136 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.3.3' ],
+136 silly audit   '@img/sharp-libvips-linux-x64': [ '1.3.3' ],
+136 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.3.3' ],
+136 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.3.3' ],
+136 silly audit   '@img/sharp-linux-arm': [ '0.35.4' ],
+136 silly audit   '@img/sharp-linux-arm64': [ '0.35.4' ],
+136 silly audit   '@img/sharp-linux-ppc64': [ '0.35.4' ],
+136 silly audit   '@img/sharp-linux-riscv64': [ '0.35.4' ],
+136 silly audit   '@img/sharp-linux-s390x': [ '0.35.4' ],
+136 silly audit   '@img/sharp-linux-x64': [ '0.35.4' ],
+136 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.35.4' ],
+136 silly audit   '@img/sharp-linuxmusl-x64': [ '0.35.4' ],
+136 silly audit   '@img/sharp-wasm32': [ '0.35.4' ],
+136 silly audit   '@img/sharp-webcontainers-wasm32': [ '0.35.4' ],
+136 silly audit   '@img/sharp-win32-arm64': [ '0.35.4' ],
+136 silly audit   '@img/sharp-win32-ia32': [ '0.35.4' ],
+136 silly audit   '@img/sharp-win32-x64': [ '0.35.4' ],
+136 silly audit   '@next/env': [ '16.3.4' ],
+136 silly audit   '@next/swc-darwin-arm64': [ '16.3.4' ],
+136 silly audit   '@next/swc-darwin-x64': [ '16.3.4' ],
+136 silly audit   '@next/swc-linux-arm64-gnu': [ '16.3.4' ],
+136 silly audit   '@next/swc-linux-arm64-musl': [ '16.3.4' ],
+136 silly audit   '@next/swc-linux-x64-gnu': [ '16.3.4' ],
+136 silly audit   '@next/swc-linux-x64-musl': [ '16.3.4' ],
+136 silly audit   '@next/swc-win32-arm64-msvc': [ '16.3.4' ],
+136 silly audit   '@next/swc-win32-x64-msvc': [ '16.3.4' ],
+136 silly audit   '@panva/hkdf': [ '1.2.1' ],
+136 silly audit   '@supabase/auth-js': [ '2.115.0' ],
+136 silly audit   '@supabase/functions-js': [ '2.115.0' ],
+136 silly audit   '@supabase/phoenix': [ '0.4.5' ],
+136 silly audit   '@supabase/postgrest-js': [ '2.115.0' ],
+136 silly audit   '@supabase/realtime-js': [ '2.115.0' ],
+136 silly audit   '@supabase/storage-js': [ '2.115.0' ],
+136 silly audit   '@supabase/supabase-js': [ '2.115.0' ],
+136 silly audit   '@swc/helpers': [ '0.5.23' ],
+136 silly audit   '@types/jsonwebtoken': [ '9.0.10' ],
+136 silly audit   '@types/ms': [ '2.1.0' ],
+136 silly audit   'baseline-browser-mapping': [ '2.11.21' ],
+136 silly audit   'buffer-equal-constant-time': [ '1.0.1' ],
+136 silly audit   'caniuse-lite': [ '1.0.30001810' ],
+136 silly audit   'client-only': [ '0.0.1' ],
+136 silly audit   cookie: [ '0.6.0', '0.7.2' ],
+136 silly audit   'detect-libc': [ '2.1.2' ],
+136 silly audit   'ecdsa-sig-formatter': [ '1.0.11' ],
+136 silly audit   'iceberg-js': [ '0.8.1' ],
+136 silly audit   jose: [ '4.15.9' ],
+136 silly audit   jsonwebtoken: [ '9.0.3' ],
+136 silly audit   jwa: [ '2.0.1' ],
+136 silly audit   jws: [ '4.0.1' ],
+136 silly audit   'lodash.includes': [ '4.3.0' ],
+136 silly audit   'lodash.isboolean': [ '3.0.3' ],
+136 silly audit   'lodash.isinteger': [ '4.0.4' ],
+136 silly audit   'lodash.isnumber': [ '3.0.3' ],
+136 silly audit   'lodash.isplainobject': [ '4.0.6' ],
+136 silly audit   'lodash.isstring': [ '4.0.1' ],
+136 silly audit   'lodash.once': [ '4.1.1' ],
+136 silly audit   'lru-cache': [ '6.0.0' ],
+136 silly audit   'lucide-react': [ '1.41.0' ],
+136 silly audit   ms: [ '2.1.3' ],
+136 silly audit   nanoid: [ '3.3.18' ],
+136 silly audit   next: [ '16.3.4' ],
+136 silly audit   'next-auth': [ '4.24.15' ],
+136 silly audit   oauth: [ '0.9.15' ],
+136 silly audit   'object-hash': [ '2.2.0' ],
+136 silly audit   'oidc-token-hash': [ '5.2.0' ],
+136 silly audit   'openid-client': [ '5.7.1' ],
+136 silly audit   picocolors: [ '1.1.1' ],
+136 silly audit   postcss: [ '8.5.23' ],
+136 silly audit   preact: [ '10.29.8' ],
+136 silly audit   'preact-render-to-string': [ '5.2.6' ],
+136 silly audit   'pretty-format': [ '3.8.0' ],
+136 silly audit   react: [ '19.2.8' ],
+136 silly audit   'react-dom': [ '19.2.8' ],
+136 silly audit   'react-icons': [ '5.7.0' ],
+136 silly audit   'safe-buffer': [ '5.2.1' ],
+136 silly audit   scheduler: [ '0.27.0' ],
+136 silly audit   semver: [ '7.8.5' ],
+136 silly audit   sharp: [ '0.35.4' ],
+136 silly audit   'source-map-js': [ '1.2.1' ],
+136 silly audit   'styled-jsx': [ '5.1.6' ],
+136 silly audit   tslib: [ '2.8.1' ],
+136 silly audit   'undici-types': [ '8.3.0' ],
+136 silly audit   uuid: [ '11.1.1' ],
+136 silly audit   yallist: [ '4.0.0' ],
+136 silly audit   '@types/node': [ '26.4.1' ],
+136 silly audit   '@types/react': [ '19.2.18' ],
+136 silly audit   typescript: [ '7.0.2' ],
+136 silly audit   csstype: [ '3.2.3' ],
+136 silly audit   '@typescript/typescript-aix-ppc64': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-darwin-arm64': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-darwin-x64': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-freebsd-arm64': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-freebsd-x64': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-linux-arm': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-linux-arm64': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-linux-loong64': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-linux-mips64el': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-linux-ppc64': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-linux-riscv64': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-linux-s390x': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-linux-x64': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-netbsd-arm64': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-netbsd-x64': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-openbsd-arm64': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-openbsd-x64': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-sunos-x64': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-win32-arm64': [ '7.0.2' ],
+136 silly audit   '@typescript/typescript-win32-x64': [ '7.0.2' ]
+136 silly audit }
+137 http cache typescript@https://registry.npmjs.org/typescript/-/typescript-7.0.2.tgz 0ms (cache hit)
+138 http cache csstype@https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz 1ms (cache hit)
+139 http cache @types/react@https://registry.npmjs.org/@types/react/-/react-19.2.18.tgz 0ms (cache hit)
+140 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 332ms
+141 silly audit report {
+141 silly audit report   cookie: [
+141 silly audit report     {
+141 silly audit report       id: 1103907,
+141 silly audit report       url: 'https://github.com/advisories/GHSA-pxg6-pf52-xh8x',
+141 silly audit report       title: 'cookie accepts cookie name, path, and domain with out of bounds characters',
+141 silly audit report       severity: 'low',
+141 silly audit report       vulnerable_versions: '<0.7.0',
+141 silly audit report       cwe: [Array],
+141 silly audit report       cvss: [Object]
+141 silly audit report     }
+141 silly audit report   ]
+141 silly audit report }
+142 silly packumentCache corgi:https://registry.npmjs.org/cookie cache-miss
+143 http cache https://registry.npmjs.org/cookie 40ms (cache hit)
+144 silly packumentCache corgi:https://registry.npmjs.org/cookie set size:25657 disposed:false
+145 silly ADD node_modules/csstype
+146 silly ADD node_modules/typescript
+147 silly ADD node_modules/@types/react
+148 verbose cwd /data/data/com.termux/files/home/suporte-bot
+149 verbose os Linux 5.4.210-android12-9-g5debd08bbf29-ab912
+150 verbose node v26.3.1
+151 verbose npm  v11.17.0
+152 verbose exit 0
+153 info ok

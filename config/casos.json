@@ -1,0 +1,67 @@
+{
+    "1539105495321681922": {
+        "next_id": 6,
+        "casos": [
+            {
+                "id": 1,
+                "tipo": "clear",
+                "alvo_id": 1540137056347619330,
+                "alvo_tag": "🤖・comandos",
+                "moderador_id": 1526990069255114913,
+                "moderador_tag": "021_f8x",
+                "motivo": "1 mensagens",
+                "timestamp": 1787497284,
+                "duracao_segundos": null,
+                "ativo": false
+            },
+            {
+                "id": 2,
+                "tipo": "timeout",
+                "alvo_id": 1534761681215946803,
+                "alvo_tag": "natalia_babyy_47541",
+                "moderador_id": 1526990069255114913,
+                "moderador_tag": "021_f8x",
+                "motivo": "teste",
+                "timestamp": 1787497327,
+                "duracao_segundos": 60,
+                "ativo": true
+            },
+            {
+                "id": 3,
+                "tipo": "timeout",
+                "alvo_id": 1534761681215946803,
+                "alvo_tag": "natalia_babyy_47541",
+                "moderador_id": 1526990069255114913,
+                "moderador_tag": "021_f8x",
+                "motivo": "teste",
+                "timestamp": 1787497346,
+                "duracao_segundos": 60,
+                "ativo": true
+            },
+            {
+                "id": 4,
+                "tipo": "clear",
+                "alvo_id": 1539490482650882148,
+                "alvo_tag": "comandos-pvd",
+                "moderador_id": 1526990069255114913,
+                "moderador_tag": "021_f8x",
+                "motivo": "5 mensagens",
+                "timestamp": 1787507662,
+                "duracao_segundos": null,
+                "ativo": false
+            },
+            {
+                "id": 5,
+                "tipo": "clear",
+                "alvo_id": 1546282266081103872,
+                "alvo_tag": "🎁・resgate-bônus",
+                "moderador_id": 1526990069255114913,
+                "moderador_tag": "021_f8x",
+                "motivo": "2 mensagens",
+                "timestamp": 1788742132,
+                "duracao_segundos": null,
+                "ativo": false
+            }
+        ]
+    }
+}

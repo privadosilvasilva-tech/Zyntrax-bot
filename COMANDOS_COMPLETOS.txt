@@ -1,0 +1,451 @@
+==============================================================================
+ROTEIRO COMPLETO - COPIAR E COLAR NO TERMUX (Um de cada vez)
+==============================================================================
+
+COMANDO 1:
+pkg update && pkg upgrade -y
+
+COMANDO 2:
+pkg install python python-pip git -y
+
+COMANDO 3:
+pip install discord.py python-dotenv
+
+COMANDO 4:
+mkdir -p cogs config
+
+COMANDO 5:
+cat > .env << 'EOF2'
+DISCORD_TOKEN=SEU_TOKEN_AQUI
+BOT_PREFIX=!
+EOF2
+
+COMANDO 6:
+cat > bot.py << 'EOF2'
+import discord
+from discord.ext import commands
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
+
+intents = discord.Intents.default()
+intents.message_content = True
+intents.members = True
+intents.guilds = True
+
+bot = commands.Bot(command_prefix="!", intents=intents)
+
+@bot.event
+async def on_ready():
+    await bot.tree.sync()
+    print(f"✅ {bot.user} ONLINE")
+    print(f"✅ Comandos sincronizados")
+
+async def load_cogs():
+    for file in os.listdir("cogs"):
+        if file.endswith(".py"):
+            await bot.load_extension(f"cogs.{file[:-3]}")
+            print(f"✅ {file}")
+
+async def main():
+    async with bot:
+        await load_cogs()
+        await bot.start(TOKEN)
+
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(main())
+EOF2
+
+COMANDO 7:
+cat > cogs/logs.py << 'EOF2'
+import discord
+from discord import app_commands
+from discord.ext import commands
+import json
+import os
+from datetime import datetime
+
+CONFIG_FILE = "config/logs_config.json"
+
+def load_config():
+    if os.path.exists(CONFIG_FILE):
+        with open(CONFIG_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {"guilds": {}}
+
+def save_config(data):
+    os.makedirs("config", exist_ok=True)
+    with open(CONFIG_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)
+
+class Logs(commands.Cog):
+    def __init__(self, bot):
+        self.bot = bot
+    
+    @app_commands.command(name="logs", description="Sistema de logs do servidor")
+    async def logs_config(self, interaction: discord.Interaction):
+        if interaction.user.id != interaction.guild.owner_id:
+            embed = discord.Embed(
+                title="❌ Sem Permissão",
+                description="Apenas o dono pode usar",
+                color=discord.Color.red()
+            )
+            embed.set_footer(text="Nix / Zyntrax Support")
+            await interaction.response.send_message(embed=embed, ephemeral=True)
+            return
+        
+        embed = discord.Embed(
+            title="📋 Painel de Logs",
+            description="Configure o sistema de logs",
+            color=discord.Color.purple()
+        )
+        embed.add_field(name="📌 Botões", value="Clique abaixo para configurar", inline=False)
+        embed.set_footer(text="Nix / Zyntrax Support")
+        
+        await interaction.response.send_message(embed=embed, view=LogsPanel(self.bot, interaction.guild))
+
+class LogsPanel(discord.ui.View):
+    def __init__(self, bot, guild):
+        super().__init__(timeout=300)
+        self.bot = bot
+        self.guild = guild
+    
+    @discord.ui.button(label="📝 Novo Log", style=discord.ButtonStyle.primary, emoji="➕")
+    async def add_log(self, interaction: discord.Interaction, button: discord.ui.Button):
+        canais = [c for c in self.guild.text_channels if self.guild.me.permissions_in(c).send_messages]
+        
+        if not canais:
+            await interaction.response.send_message("❌ Nenhum canal disponível", ephemeral=True)
+            return
+        
+        opts = [discord.SelectOption(label=c.name, value=str(c.id), emoji="💬") for c in canais[:25]]
+        
+        class SelCanal(discord.ui.Select):
+            def __init__(self, parent_self):
+                self.parent = parent_self
+                super().__init__(options=opts, placeholder="Selecione o canal", min_values=1)
+            
+            async def callback(self, inter: discord.Interaction):
+                canal_id = self.values[0]
+                
+                opts_tipo = [
+                    discord.SelectOption(label="🗑️ Mensagens Deletadas", value="delete"),
+                    discord.SelectOption(label="✏️ Mensagens Editadas", value="edit"),
+                    discord.SelectOption(label="⛔ Membros Banidos", value="ban"),
+                    discord.SelectOption(label="👋 Membros Saem", value="leave"),
+                ]
+                
+                class SelTipo(discord.ui.Select):
+                    async def callback(self, inter2: discord.Interaction):
+                        cfg = load_config()
+                        gid = str(inter2.guild_id)
+                        
+                        if gid not in cfg["guilds"]:
+                            cfg["guilds"][gid] = {}
+                        
+                        cfg["guilds"][gid][canal_id] = inter2.data["values"]
+                        save_config(cfg)
+                        
+                        embed = discord.Embed(
+                            title="✅ Canal Adicionado",
+                            description=f"<#{canal_id}> foi configurado",
+                            color=discord.Color.green()
+                        )
+                        embed.add_field(name="Tipos", value=", ".join(inter2.data["values"]))
+                        embed.set_footer(text="Nix / Zyntrax Support")
+                        await inter2.response.send_message(embed=embed, ephemeral=True)
+                
+                sel_tipo = SelTipo(options=opts_tipo, placeholder="Escolha os tipos", min_values=1, max_values=4)
+                v = discord.ui.View()
+                v.add_item(sel_tipo)
+                
+                embed = discord.Embed(
+                    title="📋 Selecione os Tipos",
+                    description=f"Canal: <#{canal_id}>",
+                    color=discord.Color.blue()
+                )
+                embed.set_footer(text="Nix / Zyntrax Support")
+                await inter.response.send_message(embed=embed, view=v, ephemeral=True)
+        
+        sel = SelCanal(self)
+        v = discord.ui.View()
+        v.add_item(sel)
+        
+        embed = discord.Embed(
+            title="📌 Selecione um Canal",
+            description="Onde os logs serão enviados?",
+            color=discord.Color.blue()
+        )
+        embed.set_footer(text="Nix / Zyntrax Support")
+        await interaction.response.send_message(embed=embed, view=v, ephemeral=True)
+    
+    @discord.ui.button(label="👥 Autorizar", style=discord.ButtonStyle.success, emoji="✅")
+    async def auth_user(self, interaction: discord.Interaction, button: discord.ui.Button):
+        membros = [m for m in self.guild.members if not m.bot]
+        
+        if not membros:
+            await interaction.response.send_message("❌ Nenhum membro", ephemeral=True)
+            return
+        
+        opts = [discord.SelectOption(label=m.name, value=str(m.id), emoji="👤") for m in membros[:25]]
+        
+        class SelMembro(discord.ui.Select):
+            async def callback(self, inter: discord.Interaction):
+                cfg = load_config()
+                gid = str(inter.guild_id)
+                mid = self.values[0]
+                
+                if gid not in cfg["guilds"]:
+                    cfg["guilds"][gid] = {}
+                
+                embed = discord.Embed(color=discord.Color.green())
+                embed.set_footer(text="Nix / Zyntrax Support")
+                
+                if "auth" not in cfg["guilds"][gid]:
+                    cfg["guilds"][gid]["auth"] = []
+                
+                if mid not in cfg["guilds"][gid]["auth"]:
+                    cfg["guilds"][gid]["auth"].append(mid)
+                    save_config(cfg)
+                    embed.title = "✅ Autorizado"
+                    embed.description = f"<@{mid}> pode configurar logs"
+                else:
+                    embed.title = "⚠️ Já Autorizado"
+                    embed.description = f"<@{mid}> já tem permissão"
+                
+                await inter.response.send_message(embed=embed, ephemeral=True)
+        
+        sel = SelMembro(options=opts, placeholder="Selecione o membro")
+        v = discord.ui.View()
+        v.add_item(sel)
+        
+        embed = discord.Embed(
+            title="👤 Autorizar Membro",
+            description="Quem pode configurar logs?",
+            color=discord.Color.green()
+        )
+        embed.set_footer(text="Nix / Zyntrax Support")
+        await interaction.response.send_message(embed=embed, view=v, ephemeral=True)
+    
+    @discord.ui.button(label="📊 Ver", style=discord.ButtonStyle.secondary, emoji="📈")
+    async def view_config(self, interaction: discord.Interaction, button: discord.ui.Button):
+        cfg = load_config()
+        gid = str(interaction.guild_id)
+        guild_cfg = cfg["guilds"].get(gid, {})
+        
+        embed = discord.Embed(
+            title="⚙️ Configuração Atual",
+            color=discord.Color.blue()
+        )
+        
+        if guild_cfg:
+            for cid, tipos in guild_cfg.items():
+                if cid != "auth":
+                    embed.add_field(
+                        name=f"<#{cid}>",
+                        value=", ".join(tipos),
+                        inline=False
+                    )
+        else:
+            embed.description = "Nenhum log configurado"
+        
+        embed.set_footer(text="Nix / Zyntrax Support")
+        await interaction.response.send_message(embed=embed, ephemeral=True)
+    
+    @discord.ui.button(label="🗑️ Remover", style=discord.ButtonStyle.danger, emoji="❌")
+    async def remove_log(self, interaction: discord.Interaction, button: discord.ui.Button):
+        cfg = load_config()
+        gid = str(interaction.guild_id)
+        guild_cfg = cfg["guilds"].get(gid, {})
+        
+        canais_cfg = {k: v for k, v in guild_cfg.items() if k != "auth"}
+        
+        if not canais_cfg:
+            await interaction.response.send_message("❌ Nenhum canal configurado", ephemeral=True)
+            return
+        
+        opts = [discord.SelectOption(label=f"Canal {i}", value=cid) for i, cid in enumerate(canais_cfg.keys(), 1)]
+        
+        class SelRemove(discord.ui.Select):
+            async def callback(self, inter: discord.Interaction):
+                cid = self.values[0]
+                cfg = load_config()
+                gid = str(inter.guild_id)
+                
+                if gid in cfg["guilds"] and cid in cfg["guilds"][gid]:
+                    del cfg["guilds"][gid][cid]
+                    save_config(cfg)
+                    
+                    embed = discord.Embed(
+                        title="✅ Removido",
+                        description=f"<#{cid}> foi removido",
+                        color=discord.Color.green()
+                    )
+                else:
+                    embed = discord.Embed(
+                        title="❌ Erro",
+                        color=discord.Color.red()
+                    )
+                
+                embed.set_footer(text="Nix / Zyntrax Support")
+                await inter.response.send_message(embed=embed, ephemeral=True)
+        
+        sel = SelRemove(options=opts, placeholder="Qual canal remover?")
+        v = discord.ui.View()
+        v.add_item(sel)
+        
+        embed = discord.Embed(
+            title="🗑️ Remover Canal",
+            color=discord.Color.red()
+        )
+        embed.set_footer(text="Nix / Zyntrax Support")
+        await interaction.response.send_message(embed=embed, view=v, ephemeral=True)
+
+    @commands.Cog.listener()
+    async def on_message_delete(self, message: discord.Message):
+        if message.author.bot:
+            return
+        
+        cfg = load_config()
+        gid = str(message.guild.id)
+        guild_cfg = cfg["guilds"].get(gid, {})
+        
+        for cid, tipos in guild_cfg.items():
+            if cid != "auth" and "delete" in tipos:
+                canal = self.bot.get_channel(int(cid))
+                if canal:
+                    embed = discord.Embed(
+                        title="🗑️ Mensagem Deletada",
+                        color=discord.Color.red(),
+                        timestamp=datetime.now()
+                    )
+                    embed.add_field(name="👤 Autor", value=message.author.mention, inline=False)
+                    embed.add_field(name="💬 Conteúdo", value=message.content[:1024] or "Sem conteúdo", inline=False)
+                    embed.add_field(name="📍 Canal", value=message.channel.mention, inline=True)
+                    embed.set_footer(text="Nix / Zyntrax Support")
+                    try:
+                        await canal.send(embed=embed)
+                    except:
+                        pass
+    
+    @commands.Cog.listener()
+    async def on_message_edit(self, before: discord.Message, after: discord.Message):
+        if before.author.bot or before.content == after.content:
+            return
+        
+        cfg = load_config()
+        gid = str(before.guild.id)
+        guild_cfg = cfg["guilds"].get(gid, {})
+        
+        for cid, tipos in guild_cfg.items():
+            if cid != "auth" and "edit" in tipos:
+                canal = self.bot.get_channel(int(cid))
+                if canal:
+                    embed = discord.Embed(
+                        title="✏️ Mensagem Editada",
+                        color=discord.Color.yellow(),
+                        timestamp=datetime.now()
+                    )
+                    embed.add_field(name="👤 Autor", value=before.author.mention, inline=False)
+                    embed.add_field(name="📝 Antes", value=before.content[:1024], inline=False)
+                    embed.add_field(name="📝 Depois", value=after.content[:1024], inline=False)
+                    embed.add_field(name="📍 Canal", value=before.channel.mention, inline=True)
+                    embed.set_footer(text="Nix / Zyntrax Support")
+                    try:
+                        await canal.send(embed=embed)
+                    except:
+                        pass
+    
+    @commands.Cog.listener()
+    async def on_member_ban(self, guild: discord.Guild, user: discord.User):
+        cfg = load_config()
+        gid = str(guild.id)
+        guild_cfg = cfg["guilds"].get(gid, {})
+        
+        for cid, tipos in guild_cfg.items():
+            if cid != "auth" and "ban" in tipos:
+                canal = self.bot.get_channel(int(cid))
+                if canal:
+                    embed = discord.Embed(
+                        title="⛔ Membro Banido",
+                        color=discord.Color.dark_red(),
+                        timestamp=datetime.now()
+                    )
+                    embed.add_field(name="👤 Usuário", value=user.mention, inline=False)
+                    embed.add_field(name="🏷️ ID", value=user.id, inline=True)
+                    embed.set_footer(text="Nix / Zyntrax Support")
+                    try:
+                        await canal.send(embed=embed)
+                    except:
+                        pass
+    
+    @commands.Cog.listener()
+    async def on_member_remove(self, member: discord.Member):
+        cfg = load_config()
+        gid = str(member.guild.id)
+        guild_cfg = cfg["guilds"].get(gid, {})
+        
+        for cid, tipos in guild_cfg.items():
+            if cid != "auth" and "leave" in tipos:
+                canal = self.bot.get_channel(int(cid))
+                if canal:
+                    embed = discord.Embed(
+                        title="👋 Membro Saiu",
+                        color=discord.Color.orange(),
+                        timestamp=datetime.now()
+                    )
+                    embed.add_field(name="👤 Usuário", value=member.mention, inline=False)
+                    embed.add_field(name="🏷️ ID", value=member.id, inline=True)
+                    embed.set_footer(text="Nix / Zyntrax Support")
+                    try:
+                        await canal.send(embed=embed)
+                    except:
+                        pass
+
+async def setup(bot):
+    await bot.add_cog(Logs(bot))
+EOF2
+
+COMANDO 8:
+cat > config/logs_config.json << 'EOF2'
+{
+    "guilds": {}
+}
+EOF2
+
+COMANDO 9:
+nano .env
+
+(Edite e coloque seu token real na linha DISCORD_TOKEN=)
+
+COMANDO 10:
+python bot.py
+
+(Se aparecer ✅ ONLINE = sucesso!)
+
+COMANDO 11 (PARA RODAR 24H):
+pkg install screen -y
+
+COMANDO 12:
+screen -S bot
+
+COMANDO 13 (dentro do screen):
+python bot.py
+
+COMANDO 14 (desacoplar):
+Ctrl + A depois D
+
+COMANDO 15 (voltar depois):
+screen -r bot
+
+==============================================================================
+PRONTO! Bot está funcionando!
+==============================================================================
+
+Use no Discord: /logs (painel de configuração)
+Use no Discord: /ping (teste de latência)
+
+Sistema desenvolvido por Nix / Zyntrax Support

@@ -1,0 +1,16 @@
+{
+  "1539105495321681922": {
+    "sorteio": {
+      "canal_inicio": 1539810901173993482,
+      "canal_resultado": 1539811030232858655,
+      "cargo_ping": 1539487240881971211,
+      "cargos_elegiveis": []
+    },
+    "evento": {
+      "canal_inicio": 1539810765886849126,
+      "canal_resultado": 1539811030232858655,
+      "cargo_ping": 1539487299857948722,
+      "cargos_elegiveis": []
+    }
+  }
+}

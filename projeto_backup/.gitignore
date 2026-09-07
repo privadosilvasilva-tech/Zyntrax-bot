@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+config/logs_config.json
+config/recepcao_config.json
+config/formularios_config.json
+.DS_Store
+*.log

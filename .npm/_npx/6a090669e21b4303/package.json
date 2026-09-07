@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@next/codemod": "^16.4.0-canary.15"
+  },
+  "_npx": {
+    "packages": [
+      "@next/codemod@canary"
+    ]
+  }
+}

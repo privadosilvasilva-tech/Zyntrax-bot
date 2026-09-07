@@ -1,0 +1,115 @@
+{
+    "1539105495321681922": {
+        "canal_painel": 1540135506875121744,
+        "mensagem_painel": 1541165382889377813,
+        "canal_transcripts": 1540138888847294575,
+        "categoria_discord_padrao": 1541146516977090642,
+        "limite_por_usuario": 1,
+        "cooldown_minutos": 5,
+        "aviso_sem_resposta_minutos": 30,
+        "proximo_numero": 2,
+        "categorias": {
+            "suporte-9729": {
+                "nome": "Suporte geral",
+                "emoji": "🛠️",
+                "descricao": "Precisa de ajuda? Abra um atendimento e conte o que aconteceu. Nossa equipe analisará sua solicitaçã",
+                "ativo": true,
+                "categoria_discord_id": 1541146516977090642,
+                "cargos_responsaveis": [
+                    1540138210125156472
+                ],
+                "prioridade_padrao": "baixa",
+                "perguntas": [
+                    "Qual assunto você precisa de ajuda?",
+                    "Explique detalhadamente o que aconteceu e informe, se possível, quando o problema começou.",
+                    "Possui alguma evidência, como imagem, vídeo ou arquivo? Se sim, envie após a abertura do atendimento."
+                ]
+            },
+            "parcerias-61dd": {
+                "nome": "Parcerias",
+                "emoji": "🤝",
+                "descricao": "Tem interesse em realizar uma parceria? Abra um atendimento e envie sua proposta para nossa equipe.",
+                "ativo": true,
+                "categoria_discord_id": 1541146516977090642,
+                "cargos_responsaveis": [
+                    1539412710524067910,
+                    1539412458790461491,
+                    1539411814528319638,
+                    1539411373115580636
+                ],
+                "prioridade_padrao": "normal",
+                "perguntas": [
+                    "Qual tipo de parceria você deseja propor?",
+                    "Apresente sua proposta de parceria e explique como ela funcionaria.",
+                    "Envie o link do seu servidor, projeto, bot ou plataforma relacionada à proposta."
+                ]
+            },
+            "den-ncias-a112": {
+                "nome": "Denúncias",
+                "emoji": "🚨",
+                "descricao": "Precisa denunciar uma situação ou membro? Abra um atendimento e apresente as informações e evidência",
+                "ativo": true,
+                "categoria_discord_id": 1541146516977090642,
+                "cargos_responsaveis": [
+                    1540138210125156472
+                ],
+                "prioridade_padrao": "alta",
+                "perguntas": [
+                    "Quem ou o que você deseja denunciar?",
+                    "Explique detalhadamente o ocorrido, incluindo quando e onde aconteceu.",
+                    "Apresente as evidências disponíveis, como imagens, vídeos, mensagens ou links.",
+                    "Há alguma informação adicional que possa ajudar na análise da denúncia?"
+                ]
+            },
+            "recursos-1540": {
+                "nome": "Recursos",
+                "emoji": "⚖️",
+                "descricao": "Deseja contestar uma decisão ou solicitar uma revisão? Abra um atendimento e apresente seu recurso p",
+                "ativo": true,
+                "categoria_discord_id": 1541146516977090642,
+                "cargos_responsaveis": [
+                    1540138210125156472
+                ],
+                "prioridade_padrao": "normal",
+                "perguntas": [
+                    "Qual decisão ou situação você deseja recorrer?",
+                    "Explique detalhadamente o motivo do seu recurso e apresente sua versão dos fatos.",
+                    "Informe quando ocorreu a situação e, se possível, forneça o link ou protocolo relacionado.",
+                    "Apresente as evidências que possam ajudar na análise do seu recurso.",
+                    "Há alguma informação adicional que gostaria de acrescentar?"
+                ]
+            },
+            "bugs-ccde": {
+                "nome": "Bugs",
+                "emoji": "🐛",
+                "descricao": "Encontrou um erro ou falha? Abra um atendimento e descreva o problema para que nossa equipe possa an",
+                "ativo": true,
+                "categoria_discord_id": 1541146516977090642,
+                "cargos_responsaveis": [
+                    1540138210125156472
+                ],
+                "prioridade_padrao": "alta",
+                "perguntas": [
+                    "O que aconteceu?",
+                    "Explique detalhadamente o erro e o que você estava fazendo quando ele aconteceu.",
+                    "O erro acontece sempre ou aconteceu apenas uma vez?",
+                    "Envie imagens, vídeos, mensagens de erro ou outras evidências que possam ajudar na análise.",
+                    "Qual comando, função ou parte do sistema apresentou o problema?"
+                ]
+            },
+            "loja-fdce": {
+                "nome": "Loja",
+                "emoji": "🛒",
+                "descricao": "Compre produtos, benefícios e serviços de forma rápida, organizada e segura.",
+                "ativo": true,
+                "categoria_discord_id": 1541146516977090642,
+                "cargos_responsaveis": [
+                    1540138210125156472
+                ],
+                "prioridade_padrao": "normal",
+                "perguntas": []
+            }
+        },
+        "canal_logs": 1540138888847294575
+    }
+}

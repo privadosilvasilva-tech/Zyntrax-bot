@@ -1,0 +1,60 @@
+{
+  "1539105495321681922": {
+    "usuarios": {
+      "1526990069255114913": {
+        "saldo": 100.0,
+        "ultimo_reward": null,
+        "transacoes": []
+      },
+      "1534761681215946803": {
+        "saldo": 95525.0,
+        "ultimo_reward": null,
+        "transacoes": [
+          {
+            "tipo": "Adição (admin)",
+            "valor": 100000.0,
+            "detalhe": "Por Nix • 𝐅𝐨𝐮𝐧𝐝𝐞𝐫",
+            "data": "2026-09-06T23:02:50.842796+00:00"
+          },
+          {
+            "tipo": "Compra na loja",
+            "valor": -1875.0,
+            "detalhe": "『⭐』Cliente Plano Normal",
+            "data": "2026-09-06T23:04:25.735152+00:00"
+          },
+          {
+            "tipo": "Compra na loja",
+            "valor": -3150.0,
+            "detalhe": "『👑』Cliente VIP — 7 Dias",
+            "data": "2026-09-07T00:32:16.671707+00:00"
+          },
+          {
+            "tipo": "ficticio",
+            "valor": 450.0,
+            "detalhe": "Bônus Diário",
+            "data": "2026-09-07T00:49:26.748599+00:00"
+          }
+        ]
+      },
+      "1515708168678932606": {
+        "saldo": 600.0,
+        "ultimo_reward": null,
+        "transacoes": [
+          {
+            "tipo": "Adição (admin)",
+            "valor": 4000.0,
+            "detalhe": "Por Nix • 𝐅𝐨𝐮𝐧𝐝𝐞𝐫",
+            "data": "2026-09-06T23:09:57.054497+00:00"
+          },
+          {
+            "tipo": "Compra na loja",
+            "valor": -3500.0,
+            "detalhe": "『👑』Cliente VIP — 7 Dias",
+            "data": "2026-09-06T23:14:29.916356+00:00"
+          }
+        ]
+      }
+    },
+    "autorizados": []
+  }
+}
