@@ -2,3 +2,4 @@
 __pycache__/
 *.pyc
 config/logs_config.json
+.fly/
