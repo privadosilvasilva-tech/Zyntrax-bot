@@ -1,0 +1,8 @@
+app = "zyntrax-bot"
+primary_region = "gru"
+
+[build]
+  builder = "dockerfile"
+
+[env]
+  DISCORD_TOKEN = ""
