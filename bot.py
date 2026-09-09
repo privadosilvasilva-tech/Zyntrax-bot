@@ -94,3 +94,42 @@ if __name__ == "__main__":
 async def on_ready():
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="👑 Transformando servidores desde 2026"))
     print(f"Bot conectado como {bot.user}")
+
+    async def on_ready(self):
+        await self.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="👑 Transformando servidores desde 2026"))
+        logger.info(f"Conectado como {self.user}")
+
+    async def on_command_error(self, ctx: commands.Context, error: commands.CommandError):
+        if isinstance(error, commands.CommandNotFound):
+            return
+        logger.error("Erro em comando de prefixo", exc_info=error)
+
+
+async def main():
+    if not TOKEN:
+        logger.critical("DISCORD_TOKEN não encontrado. Configure o arquivo .env (veja .env.example)")
+        sys.exit(1)
+
+    bot = ZyntraxBot()
+
+    @bot.tree.error
+    async def on_app_command_error(interaction: discord.Interaction, error: discord.app_commands.AppCommandError):
+        logger.error("Erro em comando de aplicação", exc_info=error)
+        msg = "❌ Ocorreu um erro inesperado ao executar esse comando."
+        try:
+            if interaction.response.is_done():
+                await interaction.followup.send(msg, ephemeral=True)
+            else:
+                await interaction.response.send_message(msg, ephemeral=True)
+        except discord.HTTPException:
+            pass
+
+    async with bot:
+        await bot.start(TOKEN)
+
+
+if __name__ == "__main__":
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        logger.info("Bot encerrado manualmente.")
