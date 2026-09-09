@@ -91,9 +91,6 @@ if __name__ == "__main__":
         logger.info("Bot encerrado manualmente.")
 
 @bot.event
-async def on_ready():
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="👑 Transformando servidores desde 2026"))
-    print(f"Bot conectado como {bot.user}")
 
     async def on_ready(self):
         await self.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="👑 Transformando servidores desde 2026"))
