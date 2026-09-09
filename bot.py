@@ -52,15 +52,6 @@ class ZyntraxBot(commands.Bot):
             except Exception:
                 logger.exception(f"Falha ao carregar cog: {nome}")
 
-    async def on_ready(self):
-        logger.info(f"Conectado como {self.user} (ID: {self.user.id})")
-        logger.info(f"Em {len(self.guilds)} servidor(es)")
-        try:
-            await self.change_presence(
-                activity=discord.Activity(type=discord.ActivityType.watching, name="/logs | /ping")
-            )
-        except Exception:
-            logger.exception("Falha ao definir presença")
 
     async def on_command_error(self, ctx: commands.Context, error: commands.CommandError):
         if isinstance(error, commands.CommandNotFound):
