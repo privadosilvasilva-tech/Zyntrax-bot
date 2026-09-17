@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Central da Turma</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<!-- Música de fundo (YouTube): entra mutada (regra do navegador) e libera no primeiro clique -->
+<div id="bgmPlayer" style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;"></div>
+<button id="musicToggle" class="music-toggle" title="Ativar som">🔈</button>
+
+<!-- TELA DE PRIMEIRA CONFIGURAÇÃO (só aparece quando ainda não existe nenhum usuário) -->
+<div id="setupScreen" class="login-screen" hidden>
+  <div class="login-card">
+    <div class="login-brand">
+      <span class="login-mark">👑</span>
+      <h1>Bem-vindo! Vamos configurar a turma</h1>
+    </div>
+    <p class="login-sub">Essa é a primeira vez que o site é aberto. Crie aqui a conta do proprietário (dono) do sistema — ela terá acesso total, incluindo o painel "BY ANDRY".</p>
+    <form id="setupForm" class="login-form">
+      <label>Seu nome
+        <input type="text" id="setupDisplayName" required />
+      </label>
+      <label>Usuário para login
+        <input type="text" id="setupUsername" autocomplete="username" required />
+      </label>
+      <label>Senha
+        <input type="password" id="setupPassword" autocomplete="new-password" minlength="6" required />
+      </label>
+      <button type="submit" class="btn btn-primary btn-block">Criar conta do proprietário</button>
+      <p id="setupError" class="form-error" hidden></p>
+    </form>
+  </div>
+</div>
+
+<!-- TELA DE LOGIN -->
+<div id="loginScreen" class="login-screen" hidden>
+  <div class="login-card">
+    <div class="login-brand">
+      <span class="login-mark">🎓</span>
+      <h1 id="turmaNome">Central da Turma</h1>
+    </div>
+    <p class="login-sub">Atividades, prazos e o chat da turma, tudo num só lugar.</p>
+    <form id="loginForm" class="login-form">
+      <label>Usuário
+        <input type="text" id="loginUsername" autocomplete="username" required />
+      </label>
+      <label>Senha
+        <input type="password" id="loginPassword" autocomplete="current-password" required />
+      </label>
+      <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+      <p id="loginError" class="form-error" hidden></p>
+    </form>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app" class="app" hidden>
+
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="login-mark">🎓</span>
+      <span id="turmaNomeSide">Central da Turma</span>
+    </div>
+    <nav class="nav">
+      <button class="nav-item active" data-view="dashboard"><span>🏠</span>Início</button>
+      <button class="nav-item" data-view="atividades"><span>📚</span>Atividades</button>
+      <button class="nav-item" data-view="calendario"><span>📅</span>Calendário</button>
+      <button class="nav-item" data-view="chat"><span>💬</span>Chat</button>
+      <button class="nav-item" data-view="avisos"><span>📢</span>Avisos</button>
+      <button class="nav-item" data-view="perfil"><span>👤</span>Meu perfil</button>
+      <div class="nav-divider" data-role-min="support"></div>
+      <button class="nav-item" data-view="admin" data-role-min="support"><span>🛠️</span>Painel admin</button>
+      <button class="nav-item" data-view="owner" data-role-min="owner"><span>👑</span>BY ANDRY</button>
+    </nav>
+    <div class="sidebar-footer">
+      <button id="themeToggle" class="theme-toggle">🌙 Modo escuro</button>
+      <button id="logoutBtn" class="btn-link">Sair</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <h2 id="viewTitle">Início</h2>
+      <div class="topbar-user">
+        <span id="userTag" class="tag"></span>
+        <span id="userName"></span>
+      </div>
+    </header>
+
+    <section id="view-dashboard" class="view"></section>
+    <section id="view-atividades" class="view" hidden></section>
+    <section id="view-calendario" class="view" hidden></section>
+    <section id="view-chat" class="view" hidden></section>
+    <section id="view-avisos" class="view" hidden></section>
+    <section id="view-perfil" class="view" hidden></section>
+    <section id="view-admin" class="view" hidden></section>
+    <section id="view-owner" class="view" hidden></section>
+  </main>
+
+  <nav class="mobile-nav">
+    <button class="nav-item active" data-view="dashboard">🏠</button>
+    <button class="nav-item" data-view="atividades">📚</button>
+    <button class="nav-item" data-view="chat">💬</button>
+    <button class="nav-item" data-view="calendario">📅</button>
+    <button class="nav-item" data-view="perfil">👤</button>
+  </nav>
+</div>
+
+<!-- Modal genérico (criar/editar atividade, criar/editar usuário) -->
+<div id="modalBackdrop" class="modal-backdrop" hidden>
+  <div class="modal" id="modalBox"></div>
+</div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+node_modules/
+.env
+db/.jwt-secret
+db/turma.db
+db/turma.db-journal
+db/turma.db-wal
+db/turma.db-shm
+public/uploads/*
+!public/uploads/.gitkeep
