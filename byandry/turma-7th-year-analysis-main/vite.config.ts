@@ -12,4 +12,9 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Forca o build pra rodar como servidor Node generico (Render, Railway, etc)
+  // em vez do preset padrao cloudflare-module.
+  nitro: {
+    preset: "node-server",
+  },
 });
