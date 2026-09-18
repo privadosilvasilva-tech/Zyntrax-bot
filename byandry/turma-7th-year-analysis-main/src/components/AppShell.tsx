@@ -91,6 +91,15 @@ export function AppShell({ title, children }: { title: string; children: ReactNo
             <span className="hidden max-w-[9rem] truncate font-medium sm:inline">
               {profile?.display_name}
             </span>
+            {isStaff(role) && (
+              <Link
+                to="/admin"
+                aria-label="Painel admin"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card/80 text-foreground transition-colors hover:text-primary md:hidden"
+              >
+                <Shield className="h-4 w-4" />
+              </Link>
+            )}
             <Link to="/perfil" aria-label="Meu perfil">
               <UserAvatar path={profile?.avatar_url} name={profile?.display_name} size="sm" />
             </Link>
